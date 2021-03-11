@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap');
+/* font-family: 'Nunito Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
+/* font-family: 'BenchNine', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+/* font-family: 'Lora', serif; */
+
+:root {
+    font-size: 1.17vw;
+    --margenes: 0 5rem;
+    --titulos1: 'Lora', serif;;
+    --titulos2: 'BenchNine', sans-serif;
+    --parrafos: 'Nunito Sans', sans-serif;
+    --fondo: rgba(21,21,21);
+    --fondo2: rgba(29,29,29);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    user-select: none;
+}
+
+
+
+/* Seccion Uno */
+.SeccionUno {
+    background-image: url(../img/hero/hero_12.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.SeccionUno::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient( rgba(255, 255, 255, 0) 10%, rgba(21, 21, 21, 1)) 100%;
+    width: 100%;
+    height: 60vh;
+    bottom: 0;
+    left: 0;
+}
+
+.header {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-content: center;
+    background: linear-gradient(0deg, rgba(50, 50, 50, 0), rgba(20, 20, 20, 0.8));
+    padding: var(--margenes);
+}
+
+.header__logo {
+    width: 25%;
+    height: 100%;
+    margin-right: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.header__menu--lista {
+    text-decoration: none;
+    width: fit-content;
+    font-family: var(--titulos2);
+    letter-spacing: 0.25rem;
+    font-size: 1.5rem;
+    margin-right: 5%;
+}
+
+.header__menu--lista:hover{
+    color: rgba(161, 161, 161);
+}
+
+.header__menu--lista:nth-child(4) {
+    border: 2px solid rgba(250, 250, 250, 0.7);
+    padding: 0.3rem 0.9rem;
+}
+
+.header__menu--lista:nth-child(4):hover {
+    border: 2px solid rgba(161, 161, 161, 1);
+}
+
+.Enunciado {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Enunciado--titulo {
+    font-family: var(--titulos2);
+    font-size: 4rem;
+    letter-spacing: 0.25rem;
+    z-index: 9;
+}
+
+.Enunciado--txt {
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    font-family: var(--titulos2);
+    z-index: 9;
+}
+
+
+
+/* Seccion Main */
+.main {
+    width: 100%;
+    padding: var(--margenes);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--fondo);
+}
+
+        /* Seccion Dos (Social Media) */
+.SeccionDos {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 7rem;
+}
+
+.SeccionDos--titulo {
+    font-family: var(--titulos2);
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.SeccionDos__card {
+    padding: 2.5rem;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5rem;
+    background-color: rgba(29,29,29); 
+}
+
+.SeccionDos--img {
+    width: 100%;
+    max-height: 100%;
+}
+
+        /* Seccion Tres (Diseño Grafico) */
+.SeccionTres {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 7rem;
+}
+
+.SeccionTres--titulo {
+    font-family: var(--titulos2);
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.SeccionTres__card {
+    padding: 2.5rem;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5rem;
+    background-color: rgba(29,29,29); 
+}
+
+.SeccionTres--img {
+    width: 100%;
+    max-height: 100%;
+}
+
+
+
+        /* Seccion Cuatro (Fotografia) */
+.SeccionCuatro {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 7rem;
+}
+
+.SeccionCuatro--titulo {
+    font-family: var(--titulos2);
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.SeccionCuatro__card {
+    padding: 2.5rem;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5rem;
+    background-color: rgba(29,29,29); 
+}
+
+.SeccionCuatro--img {
+    width: 100%;
+    max-height: 100%;
+}
+
+        /* Seccion Cinco (Diseño Web) */
+.SeccionCinco {
+    width: 100%;
+    height: fit-content;
+}
+
+.SeccionCinco--titulo {
+    font-family: var(--titulos2);
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.SeccionCinco__card {
+    padding: 2.5rem;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5rem;
+    background-color: rgba(29,29,29); 
+}
+
+.SeccionCinco--img {
+    width: 100%;
+    max-height: 100%;
+}
+
+/* Seccion Footer (Pie de Pagina) */
+.Footer {
+    width: 100%;
+    height: 30vh;
+    padding: var(--margenes);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 21, 21, 1);
+}
+
+.Footer__redes {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    border-top: 2px solid rgba(161, 161, 161, 0.4);
+}
+
+.Footer__redes a {
+    width: 1.5rem;
+    margin: 2rem;
+}
+
+.Footer__redes--icon {
+    width: 100%;
+}
+
+.Footer--txt {
+    font-family: var(--parrafos);
+    color: rgba(161, 161, 161, 1);
+    text-align: center;
+    font-size: 1rem;
+}

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap');
+/* font-family: 'Nunito Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
+/* font-family: 'BenchNine', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+/* font-family: 'Lora', serif; */
+
+:root {
+    font-size: 1.17vw;
+    --margenes: 0 5rem;
+    --titulos1: 'Lora', serif;;
+    --titulos2: 'BenchNine', sans-serif;
+    --parrafos: 'Nunito Sans', sans-serif;
+    --fondo: rgba(21,21,21);
+    --fondo2: rgba(29,29,29);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    user-select: none;
+}
+
+
+
+/* Seccion Main */
+.main {
+    background-image: url(../img/hero/hero_13.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient( rgba(255, 255, 255, 0) 10%, rgba(21, 21, 21, 1)) 100%;
+    width: 100%;
+    height: 60vh;
+    bottom: 0;
+    left: 0;
+}
+
+.header {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-content: center;
+    background: linear-gradient(0deg, rgba(50, 50, 50, 0), rgba(20, 20, 20, 0.8));
+    padding: var(--margenes);
+}
+
+.header__logo {
+    width: 25%;
+    height: 100%;
+    margin-right: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.header__menu--lista {
+    text-decoration: none;
+    width: fit-content;
+    font-family: var(--titulos2);
+    letter-spacing: 0.25rem;
+    font-size: 1.5rem;
+    margin-right: 5%;
+}
+
+.header__menu--lista:hover{
+    color: rgba(161, 161, 161);
+}
+
+.header__menu--lista:nth-child(4) {
+    border: 2px solid rgba(250, 250, 250, 0.7);
+    padding: 0.3rem 0.9rem;
+}
+
+.header__menu--lista:nth-child(4):hover {
+    border: 2px solid rgba(161, 161, 161, 1);
+}
+
+.Enunciado {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Enunciado--titulo {
+    font-family: var(--titulos2);
+    font-size: 4rem;
+    letter-spacing: 0.25rem;
+    z-index: 9;
+}
+
+.Enunciado--txt {
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    font-family: var(--titulos2);
+    z-index: 9;
+}
+
+
+
+/* Seccion de Informacion (Contacto) */
+.Contacto {
+    background-color: rgba(21, 21, 21, 1);
+    width: 100%;
+    height: 30vh;
+    position: relative;
+}
+
+.Contacto__list {
+    height: 100%;
+    background-color: rgba(21, 21, 21, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: -75%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.Contacto__list div {
+    margin-bottom: 3rem;
+}
+
+.Contacto--titulo {
+    text-align: center;
+    font-family: var(--titulos1);
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 0.15rem;
+    user-select: text;
+}
+
+.Contacto--txt {
+    text-align: center;
+    font-family: var(--titulos2);
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+}
+
+
+/* Seccion Footer */
+.Footer {
+    width: 100%;
+    height: 30vh;
+    padding: var(--margenes);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 21, 21, 1);
+}
+
+.Footer__redes {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    border-top: 2px solid rgba(161, 161, 161, 0.4);
+}
+
+.Footer__redes a {
+    width: 1.5rem;
+    margin: 2rem;
+}
+
+.Footer__redes--icon {
+    width: 100%;
+}
+
+.Footer--txt {
+    font-family: var(--parrafos);
+    color: rgba(161, 161, 161, 1);
+    text-align: center;
+    font-size: 1rem;
+}

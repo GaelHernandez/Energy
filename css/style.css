@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap');
+/* font-family: 'Nunito Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
+/* font-family: 'BenchNine', sans-serif; */
+
+:root {
+    font-size: 1.17vw;
+    --margenes: 0 5rem;
+    --titulos2: 'BenchNine', sans-serif;
+    --parrafos: 'Nunito Sans', sans-serif;
+    --fondo: rgba(21,21,21);
+    --fondo2: rgba(29,29,29);
+    --Allvw: 100vw;
+    --Allwidth: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    user-select: none;
+    /* border: 1px solid red; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Seccion Uno */
+.SeccionUno {
+    background-image: url(../img/hero/hero_4.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.SeccionUno::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient( rgba(255, 255, 255, 0) 10%, rgba(21, 21, 21, 1)) 100%;
+    width: inherit;
+    height: inherit;
+    bottom: 0;
+    left: 0;
+}
+
+.header {
+    width: inherit;
+    height: 12vh;
+    display: flex;
+    align-content: center;
+    background: linear-gradient(0deg, rgba(50, 50, 50, 0), rgba(20, 20, 20, 0.8));
+    padding: var(--margenes);
+}
+
+.header__logo {
+    width: 25%;
+    height: 100%;
+    margin-right: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.header__menu--lista {
+    z-index: 9;
+    text-decoration: none;
+    width: fit-content;
+    font-family: var(--titulos2);
+    letter-spacing: 0.25rem;
+    font-size: 1.5rem;
+    margin-right: 5%;
+}
+
+.header__menu--lista:hover{
+    color: rgba(161, 161, 161);
+}
+
+.header__menu--lista:nth-child(4) {
+    border: 2px solid rgba(250, 250, 250, 0.7);
+    padding: 0.3rem 0.9rem;
+}
+
+.header__menu--lista:nth-child(4):hover {
+    border: 2px solid rgba(161, 161, 161, 1);
+}
+
+
+/* Seccion Main */
+.main {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--fondo);
+    width: 100%;
+}
+
+        /* Seccion Dos (Presentacion) */
+.SeccionDos {
+    padding: var(--margenes);
+    width: inherit;
+    height: fit-content;
+    padding-bottom: 5rem;
+}
+
+.present {
+    width: inherit;
+    height: 32vw;
+    display: flex;
+    background-color: rgba(29,29,29);
+    position: relative;
+}
+
+.present::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, rgba(21, 21, 21, 0) 0%, rgba(29, 29, 29, 1) 100%);
+    width: 50%;
+    height: 100%;
+    z-index: 29;
+}
+
+.present--img {
+    width: 50%;
+}
+
+.present__desc {
+    width: 50%;
+    padding: 2.5rem 5rem;
+}
+
+.present__desc--titulo {
+    font-family: var(--titulos2);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.25rem;
+}
+
+.present__desc--txt {
+    font-family: var(--parrafos);
+    color: rgba(161, 161, 161);
+    text-align: justify;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+
+
+        /* Seccion Tres (Servicios) */
+.SeccionTres {
+    width: inherit;
+    padding-bottom: 4rem;
+    padding: var(--margenes);
+}
+
+.SeccionTres--titulo {
+    font-family: var(--titulos2);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    letter-spacing: 0.25rem;
+}
+
+.SeccionTres__serv {
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2.5rem;
+}
+
+.SeccionTres__card {
+    width: 100%;
+    height: 33vw;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-out;
+}
+
+.SeccionTres__card:hover {
+    transform: scale(1.1);
+}
+
+.SeccionTres__card::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient( rgba(255, 255, 255, 0) 10%, rgba(30, 30, 30, 0.8)) 70%;
+    width: 100%;
+    height: 60vh;
+    bottom: 0;
+    left: 0;
+}
+
+.SeccionTres__card a {
+    width: 100%;
+    height: 100%;
+    z-index: 19;
+}
+
+.SeccionTres__card h3 {
+    letter-spacing: 0.25rem;
+    font-family: var(--titulos2);
+    text-align: center;
+    position: absolute;
+    z-index: 9;
+    font-size: 1.5rem;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: auto;
+}
+
+
+
+        /* Seccion Cuatro (Invitacion) */
+.SeccionCuatro {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/hero/hero_9.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SeccionCuatro::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(rgba(21, 21, 21, 1) 0%, rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 1) 100%);
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+}
+
+.SeccionCuatro--titulo {
+    font-family: var(--titulos2);
+    letter-spacing: .25rem;
+    text-align: center;
+    font-size: 4rem;
+    z-index: 9;
+}
+
+.SeccionCuatro--txt {
+    font-family: var(--titulos2);
+    letter-spacing: 0.25rem;
+    font-size: 1.5rem;
+    text-align: center;
+    z-index: 9;
+}
+
+
+
+/* Seccion Footer (Pie de Pagina) */
+.Footer {
+    width: 100%;
+    height: 15vw;
+    padding: var(--margenes);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 21, 21, 1);
+}
+
+.Footer__redes {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    border-top: 2px solid rgba(161, 161, 161, 0.4);
+}
+
+.Footer__redes a {
+    width: 1.5rem;
+    margin: 2rem;
+}
+
+.Footer__redes--icon {
+    width: 100%;
+}
+
+.Footer--txt {
+    font-family: var(--parrafos);
+    color: rgba(161, 161, 161, 1);
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Media Querys */
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    .SeccionUno {
+        background-position: center;
+        height: 65vw;
+    }
+
+    .SeccionTres__serv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .SeccionTres__card {
+        height: 66vw;
+    }
+
+    .SeccionCuatro {
+        background-position: center;
+        height: 65vw;
+    }
+
+    .SeccionCuatro::before {
+        height: 65vw;
+    }
+
+
+}
