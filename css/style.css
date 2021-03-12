@@ -295,7 +295,7 @@ body {
 
 .Footer__redes a {
     width: 1.5rem;
-    margin: 2rem;
+    margin: 2rem 2rem 0 2rem;
 }
 
 .Footer__redes--icon {
@@ -307,6 +307,7 @@ body {
     color: rgba(161, 161, 161, 1);
     text-align: center;
     font-size: 1rem;
+    margin-top: 2rem;
 }
 
 /* Media Querys */
@@ -469,12 +470,9 @@ body {
     }
 
     .Footer__redes a {
-        width: 3rem;
-        margin: 4rem;
+        width: 5rem;
+        margin: 3rem 3rem 0 3rem ;
     }
-
-
-
 
 
 
