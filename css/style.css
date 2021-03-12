@@ -277,7 +277,7 @@ body {
 /* Seccion Footer (Pie de Pagina) */
 .Footer {
     width: 100vw;
-    height: 15vw;
+    height: fit-content;
     padding: var(--margenes);
     display: flex;
     flex-direction: column;
@@ -306,6 +306,7 @@ body {
     font-family: var(--parrafos);
     color: rgba(161, 161, 161, 1);
     text-align: center;
+    padding-bottom: 3rem;
     font-size: 1rem;
     margin-top: 2rem;
 }
@@ -470,8 +471,8 @@ body {
     }
 
     .Footer__redes a {
-        width: 5rem;
-        margin: 3rem 3rem 0 3rem ;
+        width: 3.5rem;
+        margin: 3.5rem 3.5rem 0 3.5rem ;
     }
 
 
