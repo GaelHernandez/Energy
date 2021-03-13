@@ -5,6 +5,7 @@
 /* font-family: 'BenchNine', sans-serif; */
 
 :root {
+    scroll-behavior: smooth;
     font-size: 1.17vw;
     --margenes: 0 5rem;
     --titulos2: 'BenchNine', sans-serif;

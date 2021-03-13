@@ -294,7 +294,8 @@
 
     .Enunciado {
             height: 55vw;
-    }
+            justify-content: flex-end;
+        }
 
     .Enunciado--titulo {
             font-size: 6rem;
