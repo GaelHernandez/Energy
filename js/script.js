@@ -1,2 +1,9 @@
-const scroll = window.innerWidth - document.body.clientWidth
-document.getElementById('body').style.width = `calc(100vw - ${scroll}px)`
+
+const act = document.getElementById('header__bar--img');
+const act_2 = document.getElementById('header__bg');
+
+function cambio() {
+    act.classList.toggle('act');
+    act_2.classList.toggle('act_2');
+};
+

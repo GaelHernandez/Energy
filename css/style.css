@@ -21,7 +21,6 @@
     box-sizing: border-box;
     color: white;
     user-select: none;
-    /* border: 1px solid red; */
 }
 
 body {
@@ -49,10 +48,11 @@ body {
 }
 
 .header {
-    width: inherit;
+    width: 100vw;
     height: 5.7vw;
     display: flex;
     align-content: center;
+    justify-content: space-between;
     background: linear-gradient(0deg, rgba(50, 50, 50, 0), rgba(20, 20, 20, 0.8));
     padding: var(--margenes);
     
@@ -101,8 +101,68 @@ body {
     border: 2px solid rgba(161, 161, 161, 1);
 }
 
-.header__menu--hamb {
+/* Menu Smartphone */
+
+.header__bar {
+    position: fixed;
+    top: 0;
+    right: 5rem;
+    width: 4rem;
+    height: inherit;
     display: none;
+    align-items: center;
+    z-index: 20;
+}
+
+.header__bar--img {
+    background-image: url(../img/logos/menuh.svg);
+    background-size: cover;
+    width: 4rem;
+    height: 4rem;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.act {
+    background-image: url(../img/logos/close.svg);
+    background-size: cover;
+    width: 3rem;
+    height: 3rem;
+}
+
+.header__bg {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    z-index: 19;
+}
+
+.header__bg a {
+    z-index: 9;
+    text-decoration: none;
+    width: fit-content;
+    font-family: var(--titulos2);
+    letter-spacing: 0.25rem;
+    font-size: 6rem;
+    margin-bottom: 5%;
+}
+
+.act_2 {
+    left: 0;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
 }
 
 
@@ -136,7 +196,7 @@ body {
     background: linear-gradient(90deg, rgba(21, 21, 21, 0) 0%, rgba(29, 29, 29, 1) 100%);
     width: 50%;
     height: 100%;
-    z-index: 29;
+    z-index: 2;
 }
 
 .present--img {
@@ -223,7 +283,7 @@ body {
     font-family: var(--titulos2);
     text-align: center;
     position: absolute;
-    z-index: 9;
+    z-index: 2;
     font-size: 1.5rem;
     left: 0;
     right: 0;
@@ -345,16 +405,16 @@ body {
         display: none;
     }
 
-    .header__menu--hamb {
+    /* Manu Smartphone */
+
+    .header__bar {
         display: flex;
-        align-items: center;
-        width: 4rem;
     }
 
-    .header__menu--hamb img {
-        width: 100%;
+    .header__bg {
+        display: flex;
     }
-    
+
 
 
     /* Seccion Dos (Presentacion) */
@@ -380,7 +440,6 @@ body {
         background: linear-gradient(0deg, rgba(21, 21, 21, 0) 0%, rgba(29, 29, 29, 1) 100%);
         width: 100%;
         height: 60%;
-        z-index: 29;
     }
     
     .present--img {
@@ -413,35 +472,35 @@ body {
 
     /* Seccion Tres (Servicios) */
     .SeccionTres--titulo {
-    font-size: 5rem;
-    letter-spacing: 0.5rem;
+        font-size: 5rem;
+        letter-spacing: 0.5rem;
     }
 
     .SeccionTres__serv {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .SeccionTres__card {
-    height: 66vw;
+        height: 66vw;
     }
 
     .SeccionTres__card:hover {
-    transform: none;
+        transform: none;
     }
 
     .SeccionTres__card h3 {
-    letter-spacing: 0.5rem;
-    font-family: var(--titulos2);
-    text-align: center;
-    position: absolute;
-    z-index: 9;
-    font-size: 4rem;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-    margin: auto;
+        letter-spacing: 0.5rem;
+        font-family: var(--titulos2);
+        text-align: center;
+        position: absolute;
+        z-index: 9;
+        font-size: 4rem;
+        left: 0;
+        right: 0;
+        bottom: 7%;
+        margin: auto;
     }
 
 
@@ -453,16 +512,16 @@ body {
     }
 
     .SeccionCuatro::before {
-    height: 65vw;
+        height: 65vw;
     }
 
     .SeccionCuatro--titulo {
-    letter-spacing: 0.5rem;
-    font-size: 5rem;
+        letter-spacing: 0.5rem;
+        font-size: 5rem;
     }
 
     .SeccionCuatro--txt {
-    font-size: 2.5rem;
+        font-size: 2.5rem;
     }
 
     /* Seccion Footer */
@@ -475,22 +534,166 @@ body {
         margin: 3.5rem 3.5rem 0 3.5rem ;
     }
 
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) and (orientation: portrait) {
+        /* Seccion Uno */
+    .SeccionUno {
+        background-position: center;
+        height: 65vw;
+    }
+
+    .header {
+        width: inherit;
+        height: 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        background: linear-gradient(0deg, rgba(50, 50, 50, 0), rgba(20, 20, 20, 0.8));
+        padding: var(--margenes);
+        
+    }
+    
+    .header__logo {
+        width: 40%;
+        margin-right: 10%;
+    }
+    
+    .header__logo img {
+        width: 100%;
+    }
+    
+    .header__menu {
+        display: none;
+    }
+
+    /* Menu Smartphone */
+    .header__bar {
+        display: flex;
+    }
+
+    .header__bg {
+        display: flex;
+    }
 
 
 
+    /* Seccion Dos (Presentacion) */
+    .SeccionDos {
+        padding: var(--margenes);
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 5rem;
+    }
+    
+    .present {
+        width: inherit;
+        height: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: rgba(29,29,29);
+        position: relative;
+    }
+    
+    .present::before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(0deg, rgba(21, 21, 21, 0) 0%, rgba(29, 29, 29, 1) 100%);
+        width: 100%;
+        height: 60%;
+        z-index: 2;
+    }
+    
+    .present--img {
+        width: 100%;
+    }
+    
+    .present__desc {
+        width: 100%;
+        padding: 2.5rem 5rem;
+    }
+    
+    .present__desc--titulo {
+        font-family: var(--titulos2);
+        text-align: center;
+        font-size: 5rem;
+        margin-bottom: 2.5rem;
+        letter-spacing: 0.5rem;
+    }
+    
+    .present__desc--txt {
+        font-family: var(--parrafos);
+        color: rgba(161, 161, 161);
+        text-align: justify;
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
 
 
 
+    /* Seccion Tres (Servicios) */
+    .SeccionTres--titulo {
+        font-size: 5rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .SeccionTres__serv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .SeccionTres__card {
+        height: 66vw;
+    }
+
+    .SeccionTres__card:hover {
+        transform: none;
+    }
+
+    .SeccionTres__card h3 {
+        letter-spacing: 0.5rem;
+        font-family: var(--titulos2);
+        text-align: center;
+        position: absolute;
+        z-index: 9;
+        font-size: 4rem;
+        left: 0;
+        right: 0;
+        bottom: 7%;
+        margin: auto;
+    }
 
 
 
+    /* Seccion Cuatro (Invitacion) */
+    .SeccionCuatro {
+        background-position: center;
+        height: 65vw;
+    }
 
+    .SeccionCuatro::before {
+        height: 65vw;
+    }
 
+    .SeccionCuatro--titulo {
+        letter-spacing: 0.5rem;
+        font-size: 5rem;
+    }
 
+    .SeccionCuatro--txt {
+        font-size: 2.5rem;
+    }
 
+    /* Seccion Footer */
+    .Footer--txt {
+        font-size: 2.5rem;
+    }
 
-
-
-
+    .Footer__redes a {
+        width: 3.5rem;
+        margin: 3.5rem 3.5rem 0 3.5rem ;
+    }
 
 }
