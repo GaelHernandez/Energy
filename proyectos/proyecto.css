@@ -29,6 +29,7 @@
 
 /* Seccion Uno */
 .SeccionUno {
+    background-position: center;
     background-image: url(../img/hero/hero_12.jpg);
     background-size: cover;
     height: 100vh;
@@ -41,7 +42,7 @@
     background: linear-gradient( rgba(255, 255, 255, 0) 10%, rgba(21, 21, 21, 1)) 100%;
     width: 100%;
     height: 60vh;
-    bottom: 0;
+    top: 0;
     left: 0;
 }
 
@@ -60,6 +61,7 @@
     margin-right: 25%;
     display: flex;
     align-items: center;
+    z-index: 9;
 }
 
 .header__logo img {
@@ -102,6 +104,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .Enunciado--titulo {
@@ -117,6 +122,70 @@
     font-family: var(--titulos2);
     z-index: 9;
 }
+
+/* Menu Smartphone */
+.header__bar {
+    position: fixed;
+    top: 0;
+    right: 5rem;
+    width: 4rem;
+    height: inherit;
+    display: none;
+    align-items: center;
+    z-index: 20;
+}
+
+.header__bar--img {
+    background-image: url(../img/logos/menuh.svg);
+    background-size: cover;
+    width: 4rem;
+    height: 4rem;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.act {
+    background-image: url(../img/logos/close.svg);
+    background-size: cover;
+    width: 3rem;
+    height: 3rem;
+}
+
+.header__bg {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    z-index: 19;
+}
+
+.header__bg a {
+    z-index: 9;
+    text-decoration: none;
+    width: fit-content;
+    font-family: var(--titulos2);
+    letter-spacing: 0.25rem;
+    font-size: 6rem;
+    margin-bottom: 5%;
+}
+
+.act_2 {
+    left: 0;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
 
 
 
@@ -287,4 +356,121 @@
     color: rgba(161, 161, 161, 1);
     text-align: center;
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    /* Seccion Uno */
+.SeccionUno {
+    background-position: 20%;
+    height: 75vh;
+}
+
+.SeccionUno::before {
+    height: 75vh;
+}
+
+.header {
+        width: inherit;
+        height: 10vw;    
+}
+
+.header__logo {
+        width: 40%;
+        margin-right: 10%;
+}
+
+.header__logo img {
+        width: 100%;
+}
+
+.header__menu {
+        display: none;
+}
+
+.Enunciado {
+    height: 55vw;
+    justify-content: flex-end;
+}
+
+.Enunciado--titulo {
+    font-size: 6rem;
+}
+
+.Enunciado--txt {
+    font-size: 2.5rem;
+}
+
+/* Manu Smartphone */
+.header__bar {
+    display: flex;
+}
+
+.header__bg {
+    display: flex;
+}
+
+/* Seccion Main */
+
+    /* Titulos de galerias */
+    .SeccionDos--titulo {
+        font-size: 5rem;
+    }
+
+    .SeccionTres--titulo {
+        font-size: 5rem;
+    }
+
+    .SeccionCuatro--titulo {
+        font-size: 5rem;
+    }
+
+    .SeccionCinco--titulo {
+        font-size: 5rem;
+    }
+
+    /* Grid de galerias */
+    .SeccionDos__card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2.5rem;
+    }
+
+    .SeccionTres__card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2.5rem;
+    }
+
+    .SeccionCuatro__card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2.5rem;
+    }
+
+    .SeccionCinco__card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2.5rem;
+    }
+
+/* Seccion Footer (Pie de Pagina) */
+    .Footer {
+        height: fit-content;
+        padding-bottom: 3rem;
+    }
+
+    .Footer--txt {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .Footer__redes a {
+        width: 3.5rem;
+        margin: 3.5rem 3.5rem 0 3.5rem ;
+    }
+
+
+    
+
+    
 }

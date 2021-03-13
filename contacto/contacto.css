@@ -25,7 +25,9 @@
     user-select: none;
 }
 
-
+body {
+    overflow-x: hidden;
+}
 
 /* Seccion Main */
 .main {
@@ -60,6 +62,7 @@
     margin-right: 25%;
     display: flex;
     align-items: center;
+    z-index: 9;
 }
 
 .header__logo img {

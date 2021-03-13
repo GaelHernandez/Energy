@@ -65,6 +65,7 @@ body {
     margin-right: 25%;
     display: flex;
     align-items: center;
+    z-index: 9;
 }
 
 .header__logo img {
