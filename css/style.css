@@ -383,13 +383,7 @@ body {
 
     .header {
         width: inherit;
-        height: 10vw;
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        background: linear-gradient(0deg, rgba(50, 50, 50, 0), rgba(20, 20, 20, 0.8));
-        padding: var(--margenes);
-        
+        height: 10vw;        
     }
     
     .header__logo {
