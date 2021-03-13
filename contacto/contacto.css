@@ -271,7 +271,7 @@
     /* Seccion Main */
     .main {
             background-position: center;
-            height: 65vw;
+            height: 75vh;
     }
 
     .header {
@@ -317,11 +317,11 @@
 
     /* Seccion de Informacion (Contacto) */
     .Contacto {
-            height: 30vw;
+            height: 17vh;
     }
 
     .Contacto__list {
-            bottom: 50%;
+            bottom: 180%;
     }
 
     .Contacto--titulo {
@@ -330,6 +330,7 @@
 
     .Contacto--txt {
             font-size: 2.5rem;
+            margin-bottom: 5rem;
     }
 
 
@@ -341,6 +342,7 @@
 
     .Footer--txt {
         font-size: 2.5rem;
+        margin-top: 2rem;
     }
 
     .Footer__redes a {
@@ -403,11 +405,11 @@
 
     /* Seccion de Informacion (Contacto) */
     .Contacto {
-            height: 30vw;
+        height: 40vh;
     }
 
     .Contacto__list {
-            bottom: 50%;
+        bottom: 30%;
     }
 
     .Contacto--titulo {
@@ -416,6 +418,7 @@
 
     .Contacto--txt {
             font-size: 2.5rem;
+            margin-bottom: 5rem;
     }
 
 
